@@ -1,4 +1,4 @@
-# 🏭 Smart Factory: Multi-Horizon WIP Forecasting & Predictive Bottleneck Early-Warning System
+# Smart Factory: Multi-Horizon WIP Forecasting & Predictive Bottleneck Early-Warning System
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C.svg)](https://pytorch.org/)
@@ -11,11 +11,11 @@
 
 ---
 
-## 📌 Executive Summary & Industrial Problem
+## Executive Summary & Industrial Problem
 
 In precision discrete manufacturing lines, unexpected queue build-up and Work-in-Process (WIP) starvation lead to idle machine downtime, prolonged cycle times, and missed customer ship commitments. Traditional floor management relies on static rule-based thresholds and lagging reports, identifying bottlenecks only **after** physical congestion has occurred.
 
-### 💡 The Solution
+### The Solution
 This project engineered an end-to-end predictive intelligence pipeline deployed on over **645,000 production records**:
 1. **Engine 1 (Regression):** A **24-Hour Multi-Horizon Time-Series Forecaster** leveraging **TimesNet (ICLR 2023)** and **Reversible Instance Normalization (RevIN)** to decompose complex intra-day and inter-day production cycles.
 2. **Engine 2 (Classification):** A **6-Hour Bottleneck Early-Warning Classifier** using **Balanced Random Forest** and physics-informed capacity features to alert shift leaders before queue saturation occurs.
@@ -23,7 +23,7 @@ This project engineered an end-to-end predictive intelligence pipeline deployed 
 
 ---
 
-## 🏛️ System Architecture
+## System Architecture
 
 ```mermaid
 flowchart TD
@@ -53,7 +53,7 @@ flowchart TD
 
 ---
 
-## ⚡ Key Benchmark Results
+## Key Benchmark Results
 
 ### 1. WIP Time-Series Forecasting (24-Hour Horizon)
 *Evaluated on an unseen held-out test set across all production stages:*
@@ -87,7 +87,7 @@ $$\text{Forecast Accuracy} = 100\% - \text{WMAPE}$$
 
 ---
 
-## 🔬 Standout Feature Engineering (Physics-Informed)
+## Standout Feature Engineering (Physics-Informed)
 
 Rather than feeding raw piece counts, the model engineers physics-based domain features:
 1. **Machine Capacity DOS & Dynamic Z-Scores (`Cap_DOS_Z72`, `Cap_DOS_Diff6_Z`):**  
@@ -101,7 +101,7 @@ Rather than feeding raw piece counts, the model engineers physics-based domain f
 
 ---
 
-## 💻 Tech Stack & Tooling
+## Tech Stack & Tooling
 
 * **Programming & Core:** Python 3.10+, NumPy, Pandas, Scipy
 * **Deep Learning (Time-Series):** PyTorch, TimesNet Architecture, FFT Transforms, RevIN Normalization
@@ -110,7 +110,7 @@ Rather than feeding raw piece counts, the model engineers physics-based domain f
 
 ---
 
-## 🚀 Quickstart & Reproduction
+## Quickstart & Reproduction
 
 ### 1. Clone the Repository
 ```bash
@@ -140,7 +140,7 @@ python src/train_timesnet.py
 
 ---
 
-## 🔒 Confidentiality & Data Anonymization
+## Confidentiality & Data Anonymization
 
 > **Notice:** In accordance with industrial non-disclosure agreements (NDA):
 > * All proprietary customer identifiers, part numbers, job numbers, and line nomenclature have been strictly anonymized (e.g., *Customer A–C*, *Process A–E*).
@@ -149,7 +149,7 @@ python src/train_timesnet.py
 
 ---
 
-## 👤 Author
+## Author
 
 **Chakrapong Pindontree**  
 *Data Science Student, Silpakorn University*  

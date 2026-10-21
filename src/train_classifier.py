@@ -1,6 +1,6 @@
 """
 ========================================================================================
-🚀 SMART FACTORY AI: 6-HOUR BOTTLENECK EARLY-WARNING CLASSIFIER
+SMART FACTORY AI: 6-HOUR BOTTLENECK EARLY-WARNING CLASSIFIER
 ========================================================================================
 Architecture: Balanced Random Forest with Physics-Informed Capacity Features
 Evaluates 6-hour predictive line congestion on imbalanced production queues.
@@ -155,14 +155,14 @@ def run_bottleneck_classification():
     res_df.to_csv(os.path.join(out_dir, "bottleneck_benchmark_results.csv"), index=False)
 
     print("\n" + "=" * 90)
-    print("🏆 6-HOUR BOTTLENECK CLASSIFICATION BENCHMARK ON TEST SET (RANDOM FOREST)")
+    print("6-HOUR BOTTLENECK CLASSIFICATION BENCHMARK ON TEST SET (RANDOM FOREST)")
     print("=" * 90)
     print(f"{'Station':<16} | {'Accuracy':>9} | {'Precision':>10} | {'Recall':>9} | {'F1-Score':>9} | {'ROC-AUC':>9}")
     print("-" * 90)
     for _, r in res_df.iterrows():
         print(f"{r['Station']:<16} | {r['RF_Accuracy']:>8.2f}% | {r['RF_Precision']:>9.2f}% | {r['RF_Recall']:>8.2f}% | {r['RF_F1']:>8.2f}% | {r['RF_ROC_AUC']:>8.2f}%")
     print("=" * 90)
-    print(f"✅ Results exported to: {os.path.join(out_dir, 'bottleneck_benchmark_results.csv')}\n")
+    print(f"Results exported to: {os.path.join(out_dir, 'bottleneck_benchmark_results.csv')}\n")
 
 
 if __name__ == "__main__":

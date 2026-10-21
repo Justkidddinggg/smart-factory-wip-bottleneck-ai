@@ -1,6 +1,6 @@
 """
 ========================================================================================
-🚀 SMART FACTORY AI: 24-HOUR MULTI-HORIZON WIP FORECASTING (TIMESNET + REVIN)
+SMART FACTORY AI: 24-HOUR MULTI-HORIZON WIP FORECASTING (TIMESNET + REVIN)
 ========================================================================================
 Architecture: TimesNet (ICLR 2023) with Reversible Instance Normalization (RevIN)
 Transforms 1D time-series into 2D intra-/inter-period tensor blocks for multi-period capture.
@@ -160,7 +160,7 @@ def run_timesnet_forecasting():
         batch_size=32, shuffle=True
     )
 
-    print(f"🚀 Training TimesNet (Seq={seq_len}h -> Pred={pred_len}h) on {len(X_train)} windows | Device: {device}")
+    print(f"Training TimesNet (Seq={seq_len}h -> Pred={pred_len}h) on {len(X_train)} windows | Device: {device}")
     model.train()
     for epoch in range(1, 11):
         total_loss = 0.0
@@ -179,7 +179,7 @@ def run_timesnet_forecasting():
         test_pred = model(torch.tensor(X_test).to(device)).cpu().numpy()
 
     print("\n" + "=" * 80)
-    print("🏆 TIMESNET 24-HOUR WIP FORECASTING BENCHMARK (TEST SET)")
+    print("TIMESNET 24-HOUR WIP FORECASTING BENCHMARK (TEST SET)")
     print("=" * 80)
     print(f"{'Station':<16} | {'WMAPE (%)':>12} | {'Accuracy (%)':>14} | {'MAE':>10}")
     print("-" * 80)
