@@ -1,0 +1,49 @@
+# ==============================================================================
+# GITIGNORE: SMART FACTORY AI PORTFOLIO
+# Strictly prevents sensitive company data, large checkpoints, and cache leaks
+# ==============================================================================
+
+# Python Bytecode & Environment
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Proprietary / Raw Company Data Files (Strict NDA Protection)
+*.csv
+*.xlsx
+*.xls
+*.tsv
+*.parquet
+*.feather
+*.h5
+*.jsonl
+*.pbix
+data/raw/
+data/processed/
+
+# Exception: Allow synthetic mock data for demonstration
+!data/mock_sample_timeseries.csv
+
+# Model Weights and Large Checkpoints (> 50MB)
+*.pt
+*.pth
+*.pkl
+*.bin
+*.onnx
+
+# OS & IDE Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
