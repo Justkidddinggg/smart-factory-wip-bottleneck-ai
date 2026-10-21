@@ -73,7 +73,7 @@ $$\text{Forecast Accuracy} = 100\% - \text{WMAPE}$$
 ---
 
 ### 2. 6-Hour Bottleneck Detection (Imbalanced Classification ~5:1)
-*Cost-sensitive classification benchmark on identifying critical congestion ($>75\text{th percentile}$):*
+*Cost-sensitive classification benchmark on identifying critical congestion (> 75th percentile):*
 
 | Production Stage | Best Model | **Accuracy** | **Precision** | **Recall** | **F1-Score** | **ROC-AUC** |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
@@ -91,13 +91,13 @@ $$\text{Forecast Accuracy} = 100\% - \text{WMAPE}$$
 
 Rather than feeding raw piece counts, the model engineers physics-based domain features:
 1. **Machine Capacity DOS & Dynamic Z-Scores (`Cap_DOS_Z72`, `Cap_DOS_Diff6_Z`):**  
-   Normalizes queue length by standard daily machine capacity ($WIP / \text{Daily\_Std\_Cap}$) and tracks the 6-hour acceleration rate of queue accumulation.
+   Normalizes queue length by standard daily machine capacity (`WIP / Daily_Std_Cap`) and tracks the 6-hour acceleration rate of queue accumulation.
 2. **Queue Cohort Maturity & Aging (`Mature_Ratio`, `Expected_Cohort`):**  
    Distinguishes between newly arrived WIP (Fresh) and parts that have exceeded standard cycle times (Mature). Tracks upstream mature WIP ready to cascade into downstream stations.
 3. **Inter-Station Bottleneck Gradient (`Net_UPH_Gap`):**  
-   Calculates the speed differential ($\text{Eff\_UPH}_{\text{upstream}} - \text{Eff\_UPH}_{\text{current}}$). A positive gap identifies upstream pushing faster than current machines can process.
+   Calculates the speed differential (`Eff_UPH_upstream - Eff_UPH_current`). A positive gap identifies upstream pushing faster than current machines can process.
 4. **Labor Workload Normalization (`Inflow_Workload_Hours`):**  
-   Translates raw quantities into standard man-hours ($Qty \times HPU$) across distinct product mixes.
+   Translates raw quantities into standard man-hours (`Qty * HPU`) across distinct product mixes.
 
 ---
 
