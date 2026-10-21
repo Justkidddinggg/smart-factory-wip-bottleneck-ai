@@ -87,6 +87,27 @@ $$\text{Forecast Accuracy} = 100\% - \text{WMAPE}$$
 
 ---
 
+## Interactive Power BI Dashboard & Decision Support
+
+The platform features an enterprise-grade 3-level drill-through dashboard bridging predictive AI outputs with daily shop-floor manufacturing operations.
+
+### 1. Bottleneck Alert & Capacity Days-of-Supply (DOS) Analysis
+Evaluates station queue length against machine standard capacities (UPH), integrates predictive bottleneck alert heatmaps, and provides multi-level drill-down by process and product mix.
+
+![Bottleneck Alert & Capacity DOS Dashboard](docs/images/dashboard_bottleneck_dos.png)
+
+### 2. WIP Production Trend & Aging Lot Tracking
+Tracks line-wide WIP progression against AI forecasting trajectories, categorizing work orders into standardized aging tiers (Normal, Caution, Warning, Critical) to eliminate queue stagnation.
+
+![WIP Production Trend & Aging Dashboard](docs/images/dashboard_wip_aging.png)
+
+### Key Dashboard Capabilities:
+* **Level 1 - Executive Overview:** Real-time visibility into overall line balance, active capacity load ratios, and high-risk stations.
+* **Level 2 - Process & Machine Deep Dive:** Analyzes machine-level bottleneck drivers, cycle-time disparities, and capacity limits.
+* **Level 3 - Product & Lot Tracking:** Identifies specific product lots exceeding aging standards to prioritize shop-floor dispatching.
+
+---
+
 ## Standout Feature Engineering (Physics-Informed)
 
 Rather than feeding raw piece counts, the model engineers physics-based domain features:
